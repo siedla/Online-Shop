@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="sectionName"> Profil </div>
+    <app-user-profile [user]="user"></app-user-profile>
+</div>
+
+<div class="container">
+    <div class="sectionName"> Koszyk </div>
+    <app-user-basket></app-user-basket>
+</div>
+
+<div class="container">
+    <div class="sectionName"> Obserwowane </div>
+    <app-user-observed></app-user-observed>
+</div>
+
+<div class="container">
+    <div class="sectionName"> Historia </div>
+    <app-user-history [userId]="user.customerId"></app-user-history>
+</div>

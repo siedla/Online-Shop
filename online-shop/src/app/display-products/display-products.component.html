@@ -1,0 +1,45 @@
+<div id="filtr">
+    <ng-select [multiple]="true" [items]="categories" bindLabel="name" bindValue="name" [(ngModel)]="selectedItems" placeholder="Wybierz kategorie">
+    </ng-select>
+    <button (click)="getFiltredProducts()"> Filtruj </button>
+</div>
+
+<div class="container" *ngFor="let product of this.productList">
+    <div class="BOelement">
+        <div class="name">
+            {{ product.name }}
+            <button (click)="modifyProduct(product)" [routerLink]="['/edit-data']" style="float: right" *ngIf="user.isEmployee">
+          Edit
+        </button>
+            <div style="clear: right"></div>
+        </div>
+    </div>
+
+    <div class="BOelement">
+        <img id="photo" src="{{ product.thumbnails }}" />
+        <p>{{ product.description }}</p>
+    </div>
+
+    <div class="BOelement">
+        <div>Dostępna ilość: {{ product.quantity }}</div>
+        <div>Cena: {{ product.price }}</div>
+    </div>
+
+    <div *ngIf="userService.isLoggedIn() | async">
+        <div>
+            <button (click)="addToUserBasket(product.productId)">
+          Dodaj do koszyka
+        </button>
+            <button (click)="addToUserObserved(product.productId)">
+          Dodaj do obserwowanych
+        </button>
+        </div>
+
+        <div *ngIf="user.isEmployee">
+            <button (click)="deleteProduct(product.productId)">
+          Usuń Produkt
+        </button>
+        </div>
+
+    </div>
+</div>

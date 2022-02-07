@@ -1,0 +1,8 @@
+<div *ngFor="let product of userBasketLarge" class="BOelement">
+    nazwa: {{product.name}} <button (click)="removeFromUserBasket(product.productId)">usuń z koszyka</button>
+    <br> cena: {{product.price}}
+    <br> ilość: {{product.quantity}}
+</div>
+<br>
+<button (click)="clearUserBasket()">czyść koszyk</button>
+<button (click)="buyItemsFromBasket()">kup koszyk</button>

@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="BOelement">
+        <h3>Edytuj produkt</h3>
+    </div>
+    <div class="BOelement">
+        <label>Nazwa: <br>
+                <input [(ngModel)]="updateProduct.name" [(ngModel)]="updateProduct.name" >
+            </label><br>
+        <label>Cena: <br>
+                <input [(ngModel)]="updateProduct.price" [(ngModel)]="updateProduct.price">
+            </label><br>
+        <label>Kategoria: <br>
+                <select [(ngModel)]="category" >
+                    <option *ngFor="let c of this.categoryList | async" [ngValue]="c.name">{{c.name}}</option>
+                </select>
+            </label><br>
+        <label>Ilość: <br>
+                <input [(ngModel)]="updateProduct.quantity" [(ngModel)]="updateProduct.quantity">
+            </label><br>
+        <label>Zdjęcie: <br>
+                <input [(ngModel)]="updateProduct.thumbnails" [(ngModel)]="updateProduct.thumbnails">
+            </label><br>
+        <label>Opis: <br>
+                <input [(ngModel)]="updateProduct.description" [(ngModel)]="updateProduct.description">
+            </label>
+    </div>
+    <div id="button">
+        <button (click)="onSubmit()" id="add" type="submit">Zapisz</button>
+    </div>
+</div>

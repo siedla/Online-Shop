@@ -1,0 +1,10 @@
+<div id="router">
+    <a *ngIf="(userService.isLoggedIn() | async) && this.isEmp" routerLink="/add-data" routerLinkActive="active"> DODAJ PRODUKT </a>
+    <a routerLink="/product" routerLinkActive="active"> LISTA PRODUKTÓW </a>
+    <a *ngIf="userService.isLoggedIn() | async" routerLink="/user-view" routerLinkActive="active"> PROFIL </a>
+    <a *ngIf="!(userService.isLoggedIn() | async)" routerLink="/register" routerLinkActive="active"> ZAREJESTRUJ </a>
+    <a *ngIf="!(userService.isLoggedIn() | async)" routerLink="/login" routerLinkActive="active"> ZALOGUJ </a>
+    <a *ngIf="(userService.isLoggedIn() | async)" (click)="logout()" routerLink="/login" routerLinkActive="active"> WYLOGUJ </a>
+</div>
+
+<router-outlet></router-outlet>

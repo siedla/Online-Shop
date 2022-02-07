@@ -1,0 +1,34 @@
+<div class="container">
+    <form class="BOelement">
+        <label>
+            Email: 
+            <input type="email" [formControl]="email">
+        </label>
+        <br>
+        <label>
+            Hasło:
+            <input type="password" [formControl]="password">
+        </label>
+        <br>
+        <label>
+            Data urodzenia:
+            <input type="date" [formControl]="birthDate">
+        </label>
+        <br>
+        <label>
+            Imię i nazwisko:
+            <input type="text" [formControl]="fullName">
+        </label>
+        <br>
+        <label>
+            Nazwa użytkownika:
+            <input type="text" [formControl]="username">
+        </label>
+        <br>
+        <button (click)="register()">
+            Zarejestruj się
+        </button>
+    </form>
+
+
+</div>

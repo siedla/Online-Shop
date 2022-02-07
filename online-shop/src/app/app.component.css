@@ -1,0 +1,72 @@
+#container {
+    flex-flow: wrap;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#box {
+    margin: 10px;
+    height: 300px;
+    width: 350px;
+    border: 1px solid rgb(161, 157, 157);
+    box-sizing: border-box;
+    border-radius: 5px;
+    float: left;
+}
+
+#top {
+    background-color: rgb(179, 184, 192);
+    padding: 5px;
+    width: 100%;
+    height: 20%;
+    border-bottom: 1px solid rgb(161, 157, 157);
+    box-sizing: border-box;
+    position: relative;
+}
+
+#mid {
+    padding-top: 5px;
+    width: 100%;
+    height: 60%;
+    box-sizing: border-box;
+}
+
+#bottom {
+    width: 100%;
+    height: 20%;
+    border-top: 1px solid rgb(161, 157, 157);
+    box-sizing: border-box;
+    position: relative
+}
+
+#price {
+    padding-top: 25px;
+    padding-left: 10px;
+    float: left;
+    position: absolute;
+    right: 20px;
+}
+
+#quantity {
+    margin-top: 15px;
+    padding: 10px;
+    float: left;
+}
+
+#name {
+    width: 70%;
+    font-weight: bold;
+    font-size: large;
+    float: left;
+}
+
+div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+a {
+    padding: 10px;
+}

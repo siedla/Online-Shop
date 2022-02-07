@@ -1,0 +1,8 @@
+<div *ngFor="let product of this.user.observed">
+    <div class="BOelement">
+        nazwa: {{product.name}} <button (click)="removeFromUserObserved(product.productId)">usuń z obserwowanych</button>
+        <br> cena: {{product.price}}
+    </div>
+</div>
+<br>
+<button (click)="clearUserObserved()">czyść obserwowane</button>
